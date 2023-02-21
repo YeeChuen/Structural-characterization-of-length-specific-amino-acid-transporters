@@ -13,7 +13,14 @@ cp -r sbatch_output /work/ratul/chuen/viral_escape
 cp -r sbatch_script /work/ratul/chuen/viral_escape
 cp -r test_fas /work/ratul/chuen/viral_escape
 cp -r test_msa /work/ratul/chuen/viral_escape
-cp -r ----- /work/ratul/chuen/viral_escape
+
+
+cp -r PoreDB_data_includeRNA /work/ratul/chuen/viral_escape
+cp -r PoreDB_nonRNA /work/ratul/chuen/viral_escape
+cp -r __pycache__ /work/ratul/chuen/viral_escape
+cp -r python_script /work/ratul/chuen/viral_escape
+cp -r test_CD-HIT_1 /work/ratul/chuen/viral_escape
+cp -r test_CD-HIT_1.clstr /work/ratul/chuen/viral_escape
 cp -r ----- /work/ratul/chuen/viral_escape
 
 '''
