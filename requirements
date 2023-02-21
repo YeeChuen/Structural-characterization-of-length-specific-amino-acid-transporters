@@ -1,0 +1,17 @@
+pandas
+requests
+lxml
+html5lib
+BeautifulSoup4
+urllib3
+os.path2
+argparse
+pyperclip
+progressbar2
+tqdm
+selenium
+
+matplotlib
+biopython
+
+

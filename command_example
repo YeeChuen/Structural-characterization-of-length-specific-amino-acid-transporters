@@ -1,0 +1,46 @@
+
+--- command for conda and module ---
+module load miniconda3/4.10.3-svrr7oe
+source activate viralescape_conda_env
+
+--- Python script command example ---
+
+# Run command below in directory /work/ratul/chuen/viralescape/step1_viralescape
+
+python pbd_muscle_one.py --a test_fas/test.fas --t PoreDB_data/PoreDB_long.fas --f muscle_msa --i 0
+	Required argument
+		--a	: the fas file path (scrapped from online)
+		--t	: the fas file path that used to do alignment (every protein 
+			from "--a" will be aligned to a selected protein from this fas file.)
+		--f	: specify the folder name to store MSA result
+		--i	: specify the index of the protein from "--t"
+
+python pbd_length.py --f test_fas/test_output --t <non/le/eq/all> --s <y/n> --l <some int>
+	Required argument
+		--f	: the file path that created form "MUSCLE_one.py" script
+		--t	: specify if you want to create a file using operation from <non/le/eq/all>
+				non	: not going to create any file
+				le	: create file for sequence length less than <--l>/default(max length)
+				eq	: create file for sequence length equal to <--l>/default (most frequent)
+				all	: create file for all possible operation
+		--s	: show the barchart or not, if script is run in Cluster, use "n", else "y" to show barchart
+	Optional argument
+		--l	: specify what sequence length to be extracted
+	explaination
+		example:
+		python pbd_length.py --f test_fas/test_output --t le --s n --l 1000 
+		the example command does the following:
+		open file named "test_output" from in directory "test_fas"
+		create a file where the protein in "test_output" is less than(--t le) 1000(--l 1000)
+		do not plot barchart(--s n)
+
+python pbd_filterRNA.py --i PoreDB_old/PoreDB.fas --o PoreDB_nonRNA
+	Required argument
+		--i	: the FASTA file location (in a folder)
+		--o	: the intended folder name to create for output
+
+muscle -super5 PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas -output PoreDB_nonRNA_le1000_muscle.afa
+	Required argument
+		-super5	: for large FASTA file 
+		-output	: the output file name in AFA format
+

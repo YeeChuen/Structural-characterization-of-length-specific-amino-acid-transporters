@@ -1,0 +1,8 @@
+-------------------------------------
+Open the output file MSA_PoreDB_output
+-------------------------------------
+Loading sequence file: PoreDB.fas
+Automatically detected 36 CPU cores
+Enabling OpenMP (with 36 threads)
+/var/spool/slurmd/job4329652/slurm_script: line 19: 138292 Killed                  msaprobs PoreDB.fas -o MSA_PoreDB_output
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=4329652.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
