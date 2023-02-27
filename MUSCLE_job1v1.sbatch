@@ -13,7 +13,7 @@
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
 
-cd /work/ratul/chuen/viralescape/step1_viralescape
+cd /work/ratul/chuen/sequence_structure_delineation/pbd_python_script
 module load miniconda3/4.10.3-svrr7oe
 source activate viralescape_conda_env
 
