@@ -10,6 +10,7 @@ python pbd_length.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --t non --s n --
 python pbd_length.py --f PoreDB_old/PoreDB.fas --t non --s y
 python pbd_length.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --t non --s n
 python pbd_length.py --f muscle_long_1/Muscle_3W5B_1 --t non --s y
+python pbd_length.py --f test_CD-HIT/test_CD-HIT_1 --t non --s n
 '''
 # Updates:  (2/8/2023)
 '''

@@ -5,12 +5,14 @@
 # Reference:
 '''
 TODO: write your reference here
+Usage:
+python pbd_checkclusterfamily.py
 '''
 # Updates:  (date)
 '''
 TODO: write your updates here
-date
-    - some update on this date
+2/20/2023
+    - creation of the script
 '''
 
 #____________________________________________________________________________________________________
@@ -58,7 +60,7 @@ def count_protein(a_list):
 
 def main():
     # TODO: write your main here
-    file = 'test_CD-HIT_1.clstr'
+    file = 'test_CD-HIT/test_CD-HIT_1.clstr'
     a_temp = openfile(file)
     count_protein(a_temp)
     pass
