@@ -1,0 +1,4 @@
+  File "/work/ratul/chuen/sequence_structure_delineation/pbd_python_script/pbd_CDHIT.py", line 80
+    move_to_newdir = currdir +"/"newdir
+                                 ^^^^^^
+SyntaxError: invalid syntax

@@ -1,0 +1,16 @@
+
+-------------------- START of "<python_script.py>" script --------------------
+new directory created with name: cluster_PoreDB_nonRNA_le1000_0
+in /work/ratul/chuen/sequence_structure_delineation
+Traceback (most recent call last):
+  File "/work/ratul/chuen/sequence_structure_delineation/pbd_python_script/pbd_CDHIT.py", line 100, in <module>
+    main()
+  File "/work/ratul/chuen/sequence_structure_delineation/pbd_python_script/pbd_CDHIT.py", line 90, in main
+    subprocess.run(cdhit_command)
+  File "/work/ratul/chuen/.conda/envs/viralescape_conda_env/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/work/ratul/chuen/.conda/envs/viralescape_conda_env/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/work/ratul/chuen/.conda/envs/viralescape_conda_env/lib/python3.10/subprocess.py", line 1847, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'cd-hit -i /work/ratul/chuen/sequence_structure_delineationPoreDB_nonRNA/PoreDB_nonRNA_le1000.fas -o cd-hit_PoreDB_nonRNA_le1000 -c 0.9'

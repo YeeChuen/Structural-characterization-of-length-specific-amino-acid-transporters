@@ -6,11 +6,15 @@
 '''
 TODO: write your reference here
 Usage:
-python pbd_checkclusterfamily.py
+    python pbd_checkclusterfamily.py --f cluster_PoreDB_nonRNA_le1000/cd-hit_PoreDB_nonRNA_le1000.clstr
 '''
 # Updates:  (date)
 '''
 TODO: write your updates here
+2/27/2023
+    - added argparse to read file
+        - a function parser
+    - import os
 2/20/2023
     - creation of the script
 '''
@@ -18,6 +22,8 @@ TODO: write your updates here
 #____________________________________________________________________________________________________
 # imports 
     # TODO: write your imports here
+import argparse
+import os
 
 #____________________________________________________________________________________________________
 # functions/set ups 
@@ -29,6 +35,17 @@ def openfile(file):
         if a_temp[len(a_temp)-1] == "":
             a_temp.pop()
         return a_temp
+
+def parser():
+    '''
+    get parser argument.
+    '''
+    # create a directory to store.
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--f', type=str, required=True) # fas path file to do CD-HIT on.
+
+    args = parser.parse_args() 
+    return args
 
 def count_protein(a_list):
     count = 0
@@ -60,7 +77,12 @@ def count_protein(a_list):
 
 def main():
     # TODO: write your main here
-    file = 'test_CD-HIT/test_CD-HIT_1.clstr'
+    work_dir = "/work/ratul/chuen/sequence_structure_delineation"
+    os.chdir(work_dir)
+
+    args = parser()
+
+    file = args.f
     a_temp = openfile(file)
     count_protein(a_temp)
     pass

@@ -59,7 +59,8 @@ def create_dir(addname, file_name):
 
 def main():
     # TODO: write your main here
-    os.chdir("/work/ratul/chuen/sequence_structure_delineation")
+    work_dir = "/work/ratul/chuen/sequence_structure_delineation"
+    os.chdir(work_dir)
 
     args = parser()
 
@@ -77,16 +78,16 @@ def main():
 
     # move to new directory, but save current path.
     currdir = os.getcwd()
-    move_to_newdir = currdir +"/"newdir
+    move_to_newdir = currdir +"/"+ newdir
     os.chdir(move_to_newdir)
 
     # do CD-HIT here.
 
     # Define the CD-HIT command with arguments
-    cdhit_command = "cd-hit -i {} -o cd-hit_{} -c 0.9".format(fasfile_loc, file_name)
+    cdhit_command = "cd-hit -i \"{}\" -o cd-hit_{} -c 0.9".format(work_dir+"/"+fasfile_loc, file_name)
 
     # Run the CD-HIT command
-    subprocess.run(cdhit_command)
+    os.system(cdhit_command)
 
     # always start the python to by bringing it to the main directory.
     pass

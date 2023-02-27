@@ -1,0 +1,43 @@
+================================================================
+Program: CD-HIT, V4.7 (+OpenMP), Jul 13 2018, 17:17:44
+Command: cd-hit -i
+         /work/ratul/chuen/sequence_structure_delineation/PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas
+         -o cd-hit_PoreDB_nonRNA_le1000 -c 0.9
+
+Started: Mon Feb 27 16:14:18 2023
+================================================================
+                            Output                              
+----------------------------------------------------------------
+total seq: 11464
+longest and shortest : 1000 and 15
+Total letters: 2887195
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 4M
+Buffer          : 1 X 10M = 10M
+Table           : 1 X 65M = 65M
+Miscellaneous   : 0M
+Total           : 80M
+
+Table limit with the given memory limit:
+Max number of representatives: 1601650
+Max number of word counting entries: 89892638
+
+comparing sequences from          0  to      11464
+....................    10000  finished       4284  clusters
+.
+    11464  finished       5066  clusters
+
+Apprixmated maximum memory consumption: 90M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 1.02
+
+-------------------- START of "<python_script.py>" script --------------------
+new directory created with name: cluster_PoreDB_nonRNA_le1000
+in /work/ratul/chuen/sequence_structure_delineation
+-------------------- END of "<python_script.py>" script --------------------
+

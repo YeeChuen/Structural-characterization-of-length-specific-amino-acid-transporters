@@ -1,0 +1,21 @@
+
+Fatal Error:
+Failed to open the database file
+Program halted !!
+
+================================================================
+Program: CD-HIT, V4.7 (+OpenMP), Jul 13 2018, 17:17:44
+Command: cd-hit -i
+         /work/ratul/chuen/sequence_structure_delineationPoreDB_nonRNA/PoreDB_nonRNA_le1000.fas
+         -o cd-hit_PoreDB_nonRNA_le1000 -c 0.9
+
+Started: Mon Feb 27 16:08:15 2023
+================================================================
+                            Output                              
+----------------------------------------------------------------
+
+-------------------- START of "<python_script.py>" script --------------------
+new directory created with name: cluster_PoreDB_nonRNA_le1000
+in /work/ratul/chuen/sequence_structure_delineation
+-------------------- END of "<python_script.py>" script --------------------
+
