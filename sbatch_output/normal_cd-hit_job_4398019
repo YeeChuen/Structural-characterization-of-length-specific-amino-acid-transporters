@@ -1,0 +1,8 @@
+
+-------------------- START of "<python_script.py>" script --------------------
+Traceback (most recent call last):
+  File "/work/ratul/chuen/structural_characterization/pbd_python_script/pbd_CDHIT.py", line 105, in <module>
+    main()
+  File "/work/ratul/chuen/structural_characterization/pbd_python_script/pbd_CDHIT.py", line 68, in main
+    os.chdir(work_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/work/ratul/chuen/sequence_structure_delineation'

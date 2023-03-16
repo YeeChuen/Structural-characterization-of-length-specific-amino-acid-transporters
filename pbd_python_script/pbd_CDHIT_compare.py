@@ -1,17 +1,26 @@
 # Author/s: Yee Chuen Teoh          (Author that contribute to the script)
-# Title: TODO:                      (the name of the script)
-# Project: TODO: project title      (the main project name, what project this script is apart of?)
+# Title: pbd_CDHIT_compare.py                  (the name of the script)
+# Project: Chowdhury Lab Sequence Structure Dealineation      (the main project name, what project this script is apart of?)
 # Description: TODO: Description    (summary of what the script does)
 # Reference:
 '''
 TODO: write your reference here
-Usage:
+Script Idea:
+    1. get true member and least member in the cluster, put them as ordered pair
+        - index 0: true member
+        - index 1: least member
+    2. get all the protein in the dataset as a list,
+        - even number index: protein description
+        - odd number index: protein sequence
+    3. 
 
+Usage:
+    python pbd_CDHIT_compare.py --cf cluster_PoreDB_nonRNA_le1000/cd-hit_PoreDB_nonRNA_le1000.clstr --df PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas 
 '''
 # Updates:  (date)
 '''
 TODO: write your updates here
-mm/dd/yyyy
+02/27/2023
     - creation of the script
 '''
 
@@ -31,7 +40,8 @@ def parser():
     '''
     # create a directory to store.
     parser = argparse.ArgumentParser()
-    parser.add_argument('--f', type=str, required=True) # fas path file to do CD-HIT on.
+    parser.add_argument('--cf', type=str, required=True) # .clstr file path file to do CD-HIT on.
+    parser.add_argument('--df', type=str, required=True) # .fas dataset file path file to do CD-HIT on.
 
     args = parser.parse_args() 
     return args
@@ -50,6 +60,6 @@ def main():
 # main 
 if __name__ == "__main__":
     # TODO: change your python script title
-    print("\n-------------------- START of \"<python_script.py>\" script --------------------")
+    print("\n-------------------- START of \"<pbd_CDHIT_compare.py.py>\" script --------------------")
     main()
-    print("-------------------- END of \"<python_script.py>\" script --------------------\n")
+    print("-------------------- END of \"<pbd_CDHIT_compare.py.py>\" script --------------------\n")

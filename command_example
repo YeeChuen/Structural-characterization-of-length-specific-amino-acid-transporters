@@ -44,3 +44,17 @@ muscle -super5 PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas -output PoreDB_nonRNA_le10
 		-super5	: for large FASTA file 
 		-output	: the output file name in AFA format
 
+
+--- MCL ---
+mcl PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --abc -I 1.4 -o test_mcl.txt
+
+--- mmseqs ---
+mmseqs cluster PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas test_mmseqs tmpdir
+
+mmseqs easy-cluster PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas test_mmseqs tmpdir --cluster-mode 1
+
+--- cd-hit ---
+cd-hit -i PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas -o test_cdhit_5.fasta -c 0.5 -n 2
+cd-hit -i input.fasta -o output.fasta -c 0.5 -n 5 -T 8 -M 16000 -r 1 -g 1 -aL 0.0 -aS 0.0 -b 20 -tolerance 0.9
+
+

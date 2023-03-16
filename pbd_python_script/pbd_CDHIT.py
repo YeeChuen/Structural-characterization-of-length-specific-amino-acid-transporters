@@ -6,7 +6,11 @@
 '''
 TODO: write your reference here
 Usage:
-    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas
+    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --c 0.9
+    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --c 0.8
+    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --c 0.7
+    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --c 0.6
+    python pbd_CDHIT.py --f PoreDB_nonRNA/PoreDB_nonRNA_le1000.fas --c 0.5
 '''
 # Updates:  (date)
 '''
@@ -35,6 +39,7 @@ def parser():
     # create a directory to store.
     parser = argparse.ArgumentParser()
     parser.add_argument('--f', type=str, required=True) # fas path file to do CD-HIT on.
+    parser.add_argument('--c', type=str, required=True) # the percentage threshold
 
     args = parser.parse_args() 
     return args
@@ -59,7 +64,7 @@ def create_dir(addname, file_name):
 
 def main():
     # TODO: write your main here
-    work_dir = "/work/ratul/chuen/sequence_structure_delineation"
+    work_dir = "/work/ratul/chuen/structural_characterization"
     os.chdir(work_dir)
 
     args = parser()
@@ -84,7 +89,7 @@ def main():
     # do CD-HIT here.
 
     # Define the CD-HIT command with arguments
-    cdhit_command = "cd-hit -i \"{}\" -o cd-hit_{} -c 0.9".format(work_dir+"/"+fasfile_loc, file_name)
+    cdhit_command = "cd-hit -i \"{}\" -o cd-hit_{} -c {}".format(work_dir+"/"+fasfile_loc, file_name, args.c)
 
     # Run the CD-HIT command
     os.system(cdhit_command)
